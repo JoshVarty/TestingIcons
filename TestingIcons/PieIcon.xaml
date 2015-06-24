@@ -1,0 +1,53 @@
+﻿<Window x:Class="TestingIcons.PieIcon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestingIcons"
+        mc:Ignorable="d"
+        Title="PieIcon" Height="300" Width="300">
+    <Path Stroke="Red" StrokeThickness="3" Fill="Yellow">
+        <Path.Data>
+            <PathGeometry>
+                <PathFigure StartPoint="200 200" IsClosed="True">
+                    <LineSegment Point="200 100" />
+                    <ArcSegment x:Name="arc"
+                                Size="100 100"
+                                SweepDirection="Clockwise" />
+                </PathFigure>
+            </PathGeometry>
+        </Path.Data>
+    </Path>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Page.Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever"
+                            AutoReverse="True">
+                    <PointAnimationUsingPath
+                            Storyboard.TargetName="arc"
+                            Storyboard.TargetProperty="Point"
+                            Duration="0:0:5">
+                        <PointAnimationUsingPath.PathGeometry>
+                            <PathGeometry>
+                                <PathFigure StartPoint="200 100">
+                                    <ArcSegment Size="100 100" Point="200 300"
+                                                SweepDirection="ClockWise" />
+                                    <ArcSegment Size="100 100" Point="200 100"
+                                                SweepDirection="Clockwise" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </PointAnimationUsingPath.PathGeometry>
+                    </PointAnimationUsingPath>
+
+                    <BooleanAnimationUsingKeyFrames
+                            Storyboard.TargetName="arc"
+                            Storyboard.TargetProperty="IsLargeArc">
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:2.5" Value="True" />
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:5" Value="False" />
+                    </BooleanAnimationUsingKeyFrames>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>
