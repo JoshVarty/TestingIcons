@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingIcons"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="350">
+        Title="MainWindow" Height="400" Width="400">
     <Window.Resources>
         <Storyboard x:Key="AnimateLine">
+            <ParallelTimeline>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="rectangle">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="330"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="300"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="rectangle">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="330"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="350"/>
             </DoubleAnimationUsingKeyFrames>
+            </ParallelTimeline>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -27,7 +29,19 @@
     </Window.Triggers>
 
     <Canvas>
-        <Rectangle x:Name="rectangle" Fill="Black" Height="15" Canvas.Left="10" Canvas.Top="150" Stroke="Black" Width="10" RenderTransformOrigin="0.5,0.5">
+        <Path Stroke="Black" StrokeThickness="10">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="350 175" IsClosed="False">
+                        <ArcSegment x:Name="arc"
+                                    Point="50,175"
+                                    Size="10 10" 
+                                    SweepDirection="Counterclockwise" /> 
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Rectangle x:Name="rectangle" Fill="Black" Height="15" Canvas.Left="50" Canvas.Top="167.5" Stroke="Black" Width="5" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
