@@ -9,7 +9,30 @@
     <Window.Resources>
         <Storyboard x:Key="AnimateLine">
             <ParallelTimeline>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="rectangle">
+                <PointAnimationUsingPath
+                            Storyboard.TargetName="arc"
+                            Storyboard.TargetProperty="Point"
+                            Duration="0:0:2">
+
+                    <PointAnimationUsingPath.PathGeometry>
+                        <PathGeometry>
+                            <PathFigure StartPoint="350 175">
+                                <ArcSegment Size="150 150" Point="50 175"
+                                                SweepDirection="Counterclockwise" />
+                                    <ArcSegment Size="150 150" Point="350 175"
+                                                SweepDirection="Counterclockwise" />
+                            </PathFigure>
+                        </PathGeometry>
+                    </PointAnimationUsingPath.PathGeometry>
+                </PointAnimationUsingPath>
+                <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="IsLargeArc" Storyboard.TargetName="arc">
+                    <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="True"/>
+                    <!-- At the half way point our loop is "large" ie. half closed-->
+                    <DiscreteBooleanKeyFrame KeyTime="0:0:2" Value="False" />
+                    <!-- At the start we have a "small" arc. It's mostly open. -->
+                </BooleanAnimationUsingKeyFrames>
+                
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="rectangle">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="300"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
@@ -35,8 +58,10 @@
                     <PathFigure StartPoint="350 175" IsClosed="False">
                         <ArcSegment x:Name="arc"
                                     Point="50,175"
-                                    Size="10 10" 
-                                    SweepDirection="Counterclockwise" /> 
+                                    Size="150 150" 
+                                    IsLargeArc="False"
+                                    SweepDirection="Counterclockwise" />
+                        
                     </PathFigure>
                 </PathGeometry>
             </Path.Data>
