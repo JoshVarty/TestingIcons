@@ -5,53 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingIcons"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Path Stroke="Black" StrokeThickness="5">
-        <Path.Data>
-            <PathGeometry>
-                <PathFigure  StartPoint="300 200" IsClosed="False">
-                    <ArcSegment x:Name="arc"
-                                    Point="100,100"
-                                    Size="100 100"
-                                    SweepDirection="Clockwise" />
-                </PathFigure>
-            </PathGeometry>
-        </Path.Data>
-    </Path>
-
+        Title="MainWindow" Height="350" Width="350">
+    <Window.Resources>
+        <Storyboard x:Key="AnimateLine">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="330"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="330"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
     <Window.Triggers>
-        <EventTrigger RoutedEvent="Page.MouseDown">
-            <BeginStoryboard>
-                <Storyboard RepeatBehavior="Forever">
-                    <PointAnimationUsingPath
-                            Storyboard.TargetName="arc"
-                            Storyboard.TargetProperty="Point"
-                            Duration="0:0:1">
-
-                        <PointAnimationUsingPath.PathGeometry>
-                            <PathGeometry>
-                                <PathFigure StartPoint="300 200">
-                                    <ArcSegment Size="100 100" Point="100 200"
-                                                SweepDirection="ClockWise" />
-                                    <ArcSegment Size="100 100" Point="300 200"
-                                                SweepDirection="Clockwise" />
-                                </PathFigure>
-                            </PathGeometry>
-                        </PointAnimationUsingPath.PathGeometry>
-                    </PointAnimationUsingPath>
-
-                    <BooleanAnimationUsingKeyFrames
-                            Storyboard.TargetName="arc"
-                            Storyboard.TargetProperty="IsLargeArc">
-                        <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True" />
-                        <!-- At the half way point our loop is "large" ie. half closed-->
-                        <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="False" />
-                        <!-- At the start we have a "small" arc. It's mostly open. -->
-                    </BooleanAnimationUsingKeyFrames>
-                </Storyboard>
-            </BeginStoryboard>
+        <EventTrigger RoutedEvent="Window.MouseDown">
+            <BeginStoryboard Storyboard="{StaticResource AnimateLine}"/>
         </EventTrigger>
     </Window.Triggers>
 
+    <Canvas>
+        <Rectangle x:Name="rectangle" Fill="Black" Height="15" Canvas.Left="10" Canvas.Top="150" Stroke="Black" Width="10" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
+
+    </Canvas>
 </Window>

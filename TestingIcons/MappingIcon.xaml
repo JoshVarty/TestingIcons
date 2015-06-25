@@ -36,27 +36,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        
-        
 
-        <Path Stroke="Black" StrokeThickness="3" Margin="64.148,0,128.999,37.335" Height="92.445" VerticalAlignment="Bottom" Stretch="Fill">
-            <Path.Data>
-                <PathGeometry>
-                    <PathGeometry.Figures>
-                        <PathFigureCollection>
-                            <PathFigure StartPoint="100,100" IsClosed="True">
-                                <PathFigure.Segments>
-                                    <PathSegmentCollection>
-                                        <ArcSegment Size="100,1000" IsLargeArc="True"
-                                         SweepDirection="Clockwise" />
-                                    </PathSegmentCollection>
-                                </PathFigure.Segments>
-                            </PathFigure>
-                        </PathFigureCollection>
-                    </PathGeometry.Figures>
-                </PathGeometry>
-            </Path.Data>
-        </Path>
 
     </Grid>
 </Window>
