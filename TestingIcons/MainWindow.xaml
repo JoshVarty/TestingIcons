@@ -10,9 +10,9 @@
         <Storyboard x:Key="AnimateLine">
             <ParallelTimeline>
                 <PointAnimationUsingPath
-                            Storyboard.TargetName="arc"
-                            Storyboard.TargetProperty="Point"
-                            Duration="0:0:2">
+                    Storyboard.TargetName="arc"
+                    Storyboard.TargetProperty="Point"
+                    Duration="0:0:2" BeginTime="0:0:0.4">
 
                     <PointAnimationUsingPath.PathGeometry>
                         <PathGeometry>
@@ -25,7 +25,7 @@
                         </PathGeometry>
                     </PointAnimationUsingPath.PathGeometry>
                 </PointAnimationUsingPath>
-                <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="IsLargeArc" Storyboard.TargetName="arc">
+                <BooleanAnimationUsingKeyFrames BeginTime="0:0:0.4" Storyboard.TargetProperty="IsLargeArc" Storyboard.TargetName="arc">
                     <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="True"/>
                     <!-- At the half way point our loop is "large" ie. half closed-->
                     <DiscreteBooleanKeyFrame KeyTime="0:0:2" Value="False" />
@@ -57,7 +57,7 @@
                 <PathGeometry>
                     <PathFigure StartPoint="350 175" IsClosed="False">
                         <ArcSegment x:Name="arc"
-                                    Point="50,175"
+                                    Point="350,175"
                                     Size="150 150" 
                                     IsLargeArc="False"
                                     SweepDirection="Counterclockwise" />
@@ -66,7 +66,7 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-        <Rectangle x:Name="rectangle" Fill="Black" Height="15" Canvas.Left="50" Canvas.Top="167.5" Stroke="Black" Width="5" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="rectangle" Fill="Black" Height="10" Canvas.Left="50" Canvas.Top="167.5" Stroke="Black" Width="5" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
