@@ -6,110 +6,52 @@
         xmlns:local="clr-namespace:TestingIcons"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Path Stroke="Black" StrokeThickness="5">
+        <Path.Data>
+            <PathGeometry>
+                <PathFigure  StartPoint="300 200" IsClosed="False">
+                    <ArcSegment x:Name="arc"
+                                    Point="100,100"
+                                    Size="100 100"
+                                    SweepDirection="Clockwise" />
+                </PathFigure>
+            </PathGeometry>
+        </Path.Data>
+    </Path>
 
-    <Viewbox>
-        <Grid>
-            <Canvas Width="50" Height="50"
-              HorizontalAlignment="Left"
-              VerticalAlignment="Top">
-                <Canvas.Clip>
-                    <RectangleGeometry Rect="0,0,50,55">
-                        <RectangleGeometry.Transform>
-                            <TranslateTransform x:Name="_clip1"/>
-                        </RectangleGeometry.Transform>
-                    </RectangleGeometry>
-                </Canvas.Clip>
-                <Path StrokeStartLineCap="Round"
-              StrokeEndLineCap="Round"
-              StrokeThickness="10"
-              RenderTransformOrigin="0.5,0.8571"
-              Data="M 5,25 c 0,-25 40,-25 40,0">
-                    <Path.Stroke>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FFFFFFFF" Offset="0"/>
-                            <GradientStop Color="#00FFFFFF" Offset="0.7"/>
-                        </LinearGradientBrush>
-                    </Path.Stroke>
-                    <Path.RenderTransform>
-                        <RotateTransform x:Name="_rot1" />
-                    </Path.RenderTransform>
-                    <Path.Triggers>
-                        <EventTrigger RoutedEvent="Path.Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <DoubleAnimation From="360" To="0"
-                                   Duration="0:0:3"
-                                   RepeatBehavior="Forever"
-                                   Storyboard.TargetName="_rot1"
-                                   Storyboard.TargetProperty="Angle"/>
-                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="_clip1"
-                         Storyboard.TargetProperty="Y"
-                         RepeatBehavior="Forever">
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:1.5" Value="25"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:2.8" Value="55"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:4.5" Value="-30"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:5.8" Value="0"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
-                                    </DoubleAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Path.Triggers>
-                </Path>
-            </Canvas>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Page.MouseDown">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever">
+                    <PointAnimationUsingPath
+                            Storyboard.TargetName="arc"
+                            Storyboard.TargetProperty="Point"
+                            Duration="0:0:1">
 
-            <Canvas Width="50" Height="50"
-              HorizontalAlignment="Left"
-              VerticalAlignment="Top"
-              Margin="40,0,0,0">
-                <Canvas.Clip>
-                    <RectangleGeometry Rect="0,0,50,55">
-                        <RectangleGeometry.Transform>
-                            <TranslateTransform x:Name="_clip2"/>
-                        </RectangleGeometry.Transform>
-                    </RectangleGeometry>
-                </Canvas.Clip>
-                <Path StrokeStartLineCap="Round"
-              StrokeEndLineCap="Round"
-              StrokeThickness="10"
-              RenderTransformOrigin="0.5,0.8571"
-              Data="M 5,25 c 0,-25 40,-25 40,0">
-                    <Path.Stroke>
-                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
-                            <GradientStop Color="#FFFFFFFF" Offset="0"/>
-                            <GradientStop Color="#00FFFFFF" Offset="0.7"/>
-                        </LinearGradientBrush>
-                    </Path.Stroke>
-                    <Path.RenderTransform>
-                        <RotateTransform x:Name="_rot2" />
-                    </Path.RenderTransform>
-                    <Path.Triggers>
-                        <EventTrigger RoutedEvent="Path.Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <DoubleAnimation From="0" To="360"
-                         Duration="0:0:3"
-                         RepeatBehavior="Forever"
-                         Storyboard.TargetName="_rot2"
-                         Storyboard.TargetProperty="Angle"/>
-                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="_clip2"
-                         Storyboard.TargetProperty="Y"
-                         RepeatBehavior="Forever">
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="55"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:1.5" Value="-30"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:4.5" Value="25"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:5.8" Value="55"/>
-                                        <DiscreteDoubleKeyFrame KeyTime="0:0:6" Value="55"/>
-                                    </DoubleAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Path.Triggers>
-                </Path>
-            </Canvas>
-        </Grid>
-    </Viewbox>
+                        <PointAnimationUsingPath.PathGeometry>
+                            <PathGeometry>
+                                <PathFigure StartPoint="300 200">
+                                    <ArcSegment Size="100 100" Point="100 200"
+                                                SweepDirection="ClockWise" />
+                                    <ArcSegment Size="100 100" Point="300 200"
+                                                SweepDirection="Clockwise" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </PointAnimationUsingPath.PathGeometry>
+                    </PointAnimationUsingPath>
+
+                    <BooleanAnimationUsingKeyFrames
+                            Storyboard.TargetName="arc"
+                            Storyboard.TargetProperty="IsLargeArc">
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True" />
+                        <!-- At the half way point our loop is "large" ie. half closed-->
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="False" />
+                        <!-- At the start we have a "small" arc. It's mostly open. -->
+                    </BooleanAnimationUsingKeyFrames>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
 
 </Window>

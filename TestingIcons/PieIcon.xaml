@@ -6,34 +6,34 @@
         xmlns:local="clr-namespace:TestingIcons"
         mc:Ignorable="d"
         Title="PieIcon" Height="300" Width="300">
-    <Path Stroke="Red" StrokeThickness="3" Fill="Yellow">
+    <Path Stroke="Black" StrokeThickness="5">
         <Path.Data>
             <PathGeometry>
-                <PathFigure StartPoint="200 200" IsClosed="True">
-                    <LineSegment Point="200 100" />
+                <PathFigure  StartPoint="300 200" IsClosed="False">
                     <ArcSegment x:Name="arc"
-                                Size="100 100"
-                                SweepDirection="Clockwise" />
+                                    Point="100,100"
+                                    Size="100 100"
+                                    SweepDirection="Clockwise" />
                 </PathFigure>
             </PathGeometry>
         </Path.Data>
     </Path>
 
     <Window.Triggers>
-        <EventTrigger RoutedEvent="Page.Loaded">
+        <EventTrigger RoutedEvent="Page.MouseDown">
             <BeginStoryboard>
-                <Storyboard RepeatBehavior="Forever"
-                            AutoReverse="True">
+                <Storyboard RepeatBehavior="Forever">
                     <PointAnimationUsingPath
                             Storyboard.TargetName="arc"
                             Storyboard.TargetProperty="Point"
-                            Duration="0:0:5">
+                            Duration="0:0:1">
+
                         <PointAnimationUsingPath.PathGeometry>
                             <PathGeometry>
-                                <PathFigure StartPoint="200 100">
-                                    <ArcSegment Size="100 100" Point="200 300"
+                                <PathFigure StartPoint="300 200">
+                                    <ArcSegment Size="100 100" Point="100 200"
                                                 SweepDirection="ClockWise" />
-                                    <ArcSegment Size="100 100" Point="200 100"
+                                    <ArcSegment Size="100 100" Point="300 200"
                                                 SweepDirection="Clockwise" />
                                 </PathFigure>
                             </PathGeometry>
@@ -43,11 +43,15 @@
                     <BooleanAnimationUsingKeyFrames
                             Storyboard.TargetName="arc"
                             Storyboard.TargetProperty="IsLargeArc">
-                        <DiscreteBooleanKeyFrame KeyTime="0:0:2.5" Value="True" />
-                        <DiscreteBooleanKeyFrame KeyTime="0:0:5" Value="False" />
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True" />
+                        <!-- At the half way point our loop is "large" ie. half closed-->
+                        <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="False" />
+                        <!-- At the start we have a "small" arc. It's mostly open. -->
                     </BooleanAnimationUsingKeyFrames>
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
+
+
 </Window>
