@@ -12,9 +12,12 @@
                 <PointAnimationUsingPath
                     Storyboard.TargetName="arc"
                     Storyboard.TargetProperty="Point"
-                    Duration="0:0:1" BeginTime="0:0:0.4">
+                    Duration="0:0:0.8" BeginTime="0:0:0.4"
+                    AccelerationRatio="0.4"
+                    DecelerationRatio="0.4">
 
                     <PointAnimationUsingPath.PathGeometry>
+
                         <PathGeometry>
                             <PathFigure StartPoint="350 175">
                                 <ArcSegment Size="150 150" Point="50 175"
@@ -26,7 +29,7 @@
                     </PointAnimationUsingPath.PathGeometry>
                 </PointAnimationUsingPath>
                 <BooleanAnimationUsingKeyFrames BeginTime="0:0:0.4" Storyboard.TargetProperty="IsLargeArc" Storyboard.TargetName="arc">
-                    <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
+                    <DiscreteBooleanKeyFrame KeyTime="0:0:0.4" Value="True"/>
                     <!-- At the half way point our loop is "large" ie. half closed-->
                     <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="False" />
                     <!-- At the start we have a "small" arc. It's mostly open. -->
