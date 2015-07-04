@@ -12,8 +12,21 @@
         Title="MainWindow" Height="430" Width="400">
 
     <Canvas>
+   
         
-        
-        
+        <Path StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="M54.666667,175.33333 L114.66852,235.33519" Fill="#FFF4F4F5" Height="70" Canvas.Left="73.667" Stretch="Fill" Stroke="Black" Canvas.Top="225.333" Width="70" StrokeThickness="10"/>
+        <Path StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="M54.666667,175.33333 L114.66852,235.33519" Fill="#FFF4F4F5" Height="200.667" Canvas.Left="126.632" Stretch="Fill" Stroke="Black" Canvas.Top="94.628" Width="200.667" RenderTransformOrigin="0.5,0.5" StrokeThickness="10">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+
+
+
     </Canvas>
 </Window>
