@@ -4,12 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingIcons"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         mc:Ignorable="d"
         xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" 
         
         Title="MainWindow" Height="430" Width="400">
+    
     <Window.Resources>
         <Storyboard x:Key="SpinningAnimation">
+            
+            <!--Reset the arc to a single point-->
             <PointAnimationUsingKeyFrames
                 Storyboard.TargetName="startArc"
                 Storyboard.TargetProperty="StartPoint"
@@ -17,58 +22,104 @@
                 <!--Always grow the arc from its starting position-->
                 <DiscretePointKeyFrame KeyTime="0:0:0" Value="200 75"/>
             </PointAnimationUsingKeyFrames>
-                <PointAnimationUsingPath
-                    Storyboard.TargetName="endArc"
-                    Storyboard.TargetProperty="Point"
-                    Duration="0:0:0.2"
-                    AccelerationRatio="0.5">
-                    <PointAnimationUsingPath.PathGeometry>
-                        <PathGeometry>
-                            <PathFigure StartPoint="200 75" IsClosed="False">
-                                <ArcSegment
-                                    Point="288.38 111.61"
-                                    Size="125 125" 
-                                    IsLargeArc="False"
-                                    SweepDirection="Clockwise" />
-                            </PathFigure>
-                        </PathGeometry>
-                    </PointAnimationUsingPath.PathGeometry>
-                </PointAnimationUsingPath>
+            <!-- Grow the arc from a point -->
+            <PointAnimationUsingPath
+                Storyboard.TargetName="endArc"
+                Storyboard.TargetProperty="Point"
+                Duration="0:0:0.2"
+                AccelerationRatio="0.5">
+                <PointAnimationUsingPath.PathGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="200 75" IsClosed="False">
+                            <ArcSegment
+                                Point="288.38 111.61"
+                                Size="125 125" 
+                                IsLargeArc="False"
+                                SweepDirection="Clockwise" />
+                        </PathFigure>
+                    </PathGeometry>
+                </PointAnimationUsingPath.PathGeometry>
+            </PointAnimationUsingPath>
             
-                <PointAnimationUsingPath 
-                    Storyboard.TargetName="startArc"
-                    Storyboard.TargetProperty="StartPoint"
-                    Duration="0:0:0.8"
-                    BeginTime="0:0:0.2"
-                    RepeatBehavior="Forever">
-                    <PointAnimationUsingPath.PathGeometry>
-                        <PathGeometry>
-                            <PathFigure StartPoint="200 75">
-                                <ArcSegment Size="125 125" Point="200 325"
-                                                SweepDirection="Clockwise" />
-                                <ArcSegment Size="125 125" Point="200 75"
-                                                SweepDirection="Clockwise" />
-                            </PathFigure>
-                        </PathGeometry>
-                    </PointAnimationUsingPath.PathGeometry>
-                </PointAnimationUsingPath>
-                <PointAnimationUsingPath 
+            <!--Spin the arc in a circle-->
+            <PointAnimationUsingPath 
+                Storyboard.TargetName="startArc"
+                Storyboard.TargetProperty="StartPoint"
+                Duration="0:0:0.8"
+                BeginTime="0:0:0.2"
+                >
+                <PointAnimationUsingPath.PathGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="200 75">
+                            <ArcSegment Size="125 125" Point="200 325"
+                                            SweepDirection="Clockwise" />
+                            <ArcSegment Size="125 125" Point="200 75"
+                                            SweepDirection="Clockwise" />
+                        </PathFigure>
+                    </PathGeometry>
+                </PointAnimationUsingPath.PathGeometry>
+            </PointAnimationUsingPath>
+            <PointAnimationUsingPath 
                     Storyboard.TargetName="endArc"
                     Storyboard.TargetProperty="Point"
                     Duration="0:0:0.8"
                     BeginTime="0:0:0.2"
+                    >
+                <PointAnimationUsingPath.PathGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="288.38 111.61">
+                            <ArcSegment Size="125 125" Point="111.61 288.39"
+                                                SweepDirection="Clockwise" />
+                            <ArcSegment Size="125 125" Point="288.38 111.61"
+                                                SweepDirection="Clockwise" />
+                        </PathFigure>
+                    </PathGeometry>
+                </PointAnimationUsingPath.PathGeometry>
+            </PointAnimationUsingPath>
+
+            
+            <!-- Spin the arc faster after a single rotation-->
+            <PointAnimationUsingPath 
+                Storyboard.TargetName="startArc"
+                Storyboard.TargetProperty="StartPoint"
+                Duration="0:0:0.4"
+                BeginTime="0:0:1"
+                RepeatBehavior="Forever">
+                <PointAnimationUsingPath.PathGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="200 75">
+                            <ArcSegment Size="125 125" Point="200 325"
+                                            SweepDirection="Clockwise" />
+                            <ArcSegment Size="125 125" Point="200 75"
+                                            SweepDirection="Clockwise" />
+                        </PathFigure>
+                    </PathGeometry>
+                </PointAnimationUsingPath.PathGeometry>
+            </PointAnimationUsingPath>
+            <PointAnimationUsingPath 
+                    Storyboard.TargetName="endArc"
+                    Storyboard.TargetProperty="Point"
+                    Duration="0:0:0.4"
+                    BeginTime="0:0:1"
                     RepeatBehavior="Forever">
-                    <PointAnimationUsingPath.PathGeometry>
-                        <PathGeometry>
-                            <PathFigure StartPoint="288.38 111.61">
-                                <ArcSegment Size="125 125" Point="111.61 288.39"
+                <PointAnimationUsingPath.PathGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="288.38 111.61">
+                            <ArcSegment Size="125 125" Point="111.61 288.39"
                                                 SweepDirection="Clockwise" />
-                                <ArcSegment Size="125 125" Point="288.38 111.61"
+                            <ArcSegment Size="125 125" Point="288.38 111.61"
                                                 SweepDirection="Clockwise" />
-                            </PathFigure>
-                        </PathGeometry>
-                    </PointAnimationUsingPath.PathGeometry>
-                </PointAnimationUsingPath>
+                        </PathFigure>
+                    </PathGeometry>
+                </PointAnimationUsingPath.PathGeometry>
+            </PointAnimationUsingPath>
+
+        </Storyboard>
+        
+        
+        
+        <Storyboard x:Key="test">
+
             
         </Storyboard>
     </Window.Resources>
@@ -76,7 +127,13 @@
         <EventTrigger RoutedEvent="Window.MouseDown">
             <BeginStoryboard Storyboard="{StaticResource SpinningAnimation}"/>
         </EventTrigger>
+
+        
+      
+
     </Window.Triggers>
+    
+    
     <Canvas>
         <Path x:Name="eighthOfCircle" Stroke="Black" StrokeThickness="5">
             <Path.Data>
