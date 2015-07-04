@@ -7,43 +7,50 @@
         mc:Ignorable="d"
         xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" 
         
-        Title="MainWindow" Height="400" Width="400">
+        Title="MainWindow" Height="430" Width="400">
     <Window.Resources>
-        <Storyboard x:Key="AnimateCircle">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="350">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="350">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0" Value="50"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
+        <Storyboard x:Key="SpinningAnimation">
+            <ParallelTimeline>
+                <PointAnimationUsingPath
+                    Storyboard.TargetName="arc"
+                    Storyboard.TargetProperty="Point"
+                    Duration="0:0:0.2"
+                    AccelerationRatio="0.5">
+                    <PointAnimationUsingPath.PathGeometry>
+                        <PathGeometry>
+                            <PathFigure StartPoint="200 75" IsClosed="False">
+                                <ArcSegment
+                                    Point="262.5,137.5"
+                                    Size="125 125" 
+                                    IsLargeArc="False"
+                                    SweepDirection="Clockwise" />
+                            </PathFigure>
+                        </PathGeometry>
+                    </PointAnimationUsingPath.PathGeometry>
+                </PointAnimationUsingPath>
+            </ParallelTimeline>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.MouseDown">
-            <BeginStoryboard Storyboard="{StaticResource AnimateCircle}"/>
+            <BeginStoryboard Storyboard="{StaticResource SpinningAnimation}"/>
         </EventTrigger>
     </Window.Triggers>
+    <Canvas>
+        <Path Stroke="Black" StrokeThickness="10">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="200 75" IsClosed="False">
+                        <ArcSegment x:Name="arc"
+                                    Point="262.5,137.5"
+                                    Size="125 125" 
+                                    IsLargeArc="False"
+                                    SweepDirection="Clockwise" />
 
-    <Ellipse x:Name="ellipse" Fill="#FFF4F4F5" Height="0" Width="0" Stroke="Black" StrokeThickness="40"/>
-
-
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Canvas>
 
 </Window>
