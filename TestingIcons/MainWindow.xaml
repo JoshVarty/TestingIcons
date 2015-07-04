@@ -20,7 +20,7 @@
                         <PathGeometry>
                             <PathFigure StartPoint="200 75" IsClosed="False">
                                 <ArcSegment
-                                    Point="262.5,137.5"
+                                    Point="288.38 111.61"
                                     Size="125 125" 
                                     IsLargeArc="False"
                                     SweepDirection="Clockwise" />
@@ -37,16 +37,42 @@
         </EventTrigger>
     </Window.Triggers>
     <Canvas>
-        <Path Stroke="Black" StrokeThickness="10">
+        <Path Stroke="Black" StrokeThickness="10" Visibility="Hidden">
             <Path.Data>
                 <PathGeometry>
                     <PathFigure StartPoint="200 75" IsClosed="False">
                         <ArcSegment x:Name="arc"
-                                    Point="262.5,137.5"
+                                    Point="288.38 111.61"
                                     Size="125 125" 
                                     IsLargeArc="False"
                                     SweepDirection="Clockwise" />
 
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        
+        <Path x:Name="startPointPath" Stroke="Green" Visibility="Hidden" StrokeThickness="5">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="200 75">
+                        <ArcSegment Size="125 125" Point="200 325"
+                                                SweepDirection="Clockwise" />
+                        <ArcSegment Size="125 125" Point="200 75"
+                                                SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Path x:Name="endPointPath" Stroke="Black" StrokeThickness="5">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="288.38 111.61">
+                        <ArcSegment Size="125 125" Point="111.61 288.39"
+                                                SweepDirection="Clockwise" />
+                        <ArcSegment Size="125 125" Point="288.38 111.61"
+                                                SweepDirection="Clockwise" />
                     </PathFigure>
                 </PathGeometry>
             </Path.Data>

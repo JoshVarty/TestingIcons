@@ -21,6 +21,9 @@
             <Guide Alignment="Top" Position="75" />
             <Guide Alignment="Left" Position="325" />
             <Guide Alignment="Top" Position="200" />
+            <Guide Alignment="Top" Position="5" />
+            <Guide Alignment="Left" Position="262" />
+            <Guide Alignment="Top" Position="137" />
           </Guides>
         </GuideModel>
       </GuideModels>
