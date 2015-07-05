@@ -11,19 +11,5 @@
         
         Title="MainWindow" Height="430" Width="400">
 
-    <Canvas>
-
-        <Line Stroke="Black" StrokeThickness="10" StrokeStartLineCap="Round" X1="0" Y1="0" X2="60" Y2="60" Canvas.Left="87.333" Canvas.Top="216"  />
-
-        <Line Stroke="Black" StrokeThickness="10" StrokeStartLineCap="Round" X1="0" Y1="0" X2="180" Y2="180" Canvas.Left="136.996" Canvas.Top="95.995">
-            <Line.LayoutTransform>
-                <TransformGroup>
-                    <RotateTransform Angle="90"/>
-                </TransformGroup>
-            </Line.LayoutTransform>
-        </Line>
-
-
-
-    </Canvas>
+  
 </Window>
