@@ -61,6 +61,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CheckmarkIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CircleExploding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -75,6 +79,9 @@
     </Compile>
     <Compile Include="BasicLineAnimation.xaml.cs">
       <DependentUpon>BasicLineAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckmarkIcon.xaml.cs">
+      <DependentUpon>CheckmarkIcon.xaml</DependentUpon>
     </Compile>
     <Compile Include="CircleExploding.xaml.cs">
       <DependentUpon>CircleExploding.xaml</DependentUpon>
