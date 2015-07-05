@@ -12,19 +12,16 @@
         Title="MainWindow" Height="430" Width="400">
 
     <Canvas>
-   
-        
-        <Path StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="M54.666667,175.33333 L114.66852,235.33519" Fill="#FFF4F4F5" Height="70" Canvas.Left="73.667" Stretch="Fill" Stroke="Black" Canvas.Top="225.333" Width="70" StrokeThickness="10"/>
-        <Path StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="M54.666667,175.33333 L114.66852,235.33519" Fill="#FFF4F4F5" Height="200.667" Canvas.Left="126.632" Stretch="Fill" Stroke="Black" Canvas.Top="94.628" Width="200.667" RenderTransformOrigin="0.5,0.5" StrokeThickness="10">
-            <Path.RenderTransform>
+
+        <Line Stroke="Black" StrokeThickness="10" StrokeStartLineCap="Round" X1="0" Y1="0" X2="60" Y2="60" Canvas.Left="87.333" Canvas.Top="216"  />
+
+        <Line Stroke="Black" StrokeThickness="10" StrokeStartLineCap="Round" X1="0" Y1="0" X2="180" Y2="180" Canvas.Left="136.996" Canvas.Top="95.995">
+            <Line.LayoutTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
                     <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
                 </TransformGroup>
-            </Path.RenderTransform>
-        </Path>
+            </Line.LayoutTransform>
+        </Line>
 
 
 
