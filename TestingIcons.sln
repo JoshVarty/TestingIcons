@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 14
+# Visual Studio 14
 VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingIcons", "TestingIcons\TestingIcons.csproj", "{659CB763-2190-464F-A99E-B486DAB67DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingIconsAgainstVS", "TestingIconsAgainstVS\TestingIconsAgainstVS.csproj", "{AD94F622-7D65-45DD-8F5F-ACCFFD4649AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{659CB763-2190-464F-A99E-B486DAB67DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{659CB763-2190-464F-A99E-B486DAB67DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{659CB763-2190-464F-A99E-B486DAB67DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD94F622-7D65-45DD-8F5F-ACCFFD4649AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD94F622-7D65-45DD-8F5F-ACCFFD4649AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD94F622-7D65-45DD-8F5F-ACCFFD4649AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD94F622-7D65-45DD-8F5F-ACCFFD4649AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
