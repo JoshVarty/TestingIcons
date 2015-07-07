@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingIcons"
         mc:Ignorable="d"
-        Title="CheckmarkIcon" Height="300" Width="300">
+        Title="CheckmarkIcon" Height="400" Width="400">
     <Window.Resources>
         <Storyboard x:Key="CheckMarkEnter">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line">
