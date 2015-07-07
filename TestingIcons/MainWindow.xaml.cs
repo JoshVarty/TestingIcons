@@ -24,5 +24,13 @@ namespace TestingIcons
         {
             InitializeComponent();
         }
+
+
+        public void myMethod()
+        {
+            int x = 0;
+            int y = 2;
+            int z = 2 + x + y;
+        }
     }
 }
