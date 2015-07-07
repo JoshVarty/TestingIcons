@@ -7,13 +7,19 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         mc:Ignorable="d"
+        xmlns:icon="clr-namespace:TestingIcons.icons"
         xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" 
         Title="MainWindow" Width="800" Height="600">
-    
+
     <Canvas>
         <Canvas.Background>
             <ImageBrush ImageSource="background.png" Stretch="None"/>
         </Canvas.Background>
-        
+
+        <icon:SampleIcon Width="30" Height="30" Canvas.Left="75" Canvas.Top="410">
+
+        </icon:SampleIcon>
+
+
     </Canvas>
 </Window>
