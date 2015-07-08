@@ -17,9 +17,9 @@
         </Canvas.Background>
 
 
-        <icon:ContainingCircle Width="30" Height="30" Canvas.Left="75" Canvas.Top="410"/>
-        <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="450"/>
-        <icon:Error Width="30" Height="30" Canvas.Left="75" Canvas.Top="490"/>
+        <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="410"/>
+        <icon:Error Width="30" Height="30" Canvas.Left="75" Canvas.Top="440"/>
+        <icon:Warning Width="30" Height="30" Canvas.Left="75" Canvas.Top="470"/>
 
 
     </Canvas>
