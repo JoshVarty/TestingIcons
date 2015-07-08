@@ -16,10 +16,14 @@
             <ImageBrush ImageSource="background.png" Stretch="None"/>
         </Canvas.Background>
 
-        <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="410">
+
+        <icon:ContainingCircle Width="30" Height="30" Canvas.Left="75" Canvas.Top="410">
+            
+        </icon:ContainingCircle>
+
+        <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="450">
 
         </icon:Success>
-
 
     </Canvas>
 </Window>
