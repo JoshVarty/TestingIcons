@@ -60,6 +60,9 @@
     <Compile Include="icons\ContainingCircle.xaml.cs">
       <DependentUpon>ContainingCircle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="icons\Error.xaml.cs">
+      <DependentUpon>Error.xaml</DependentUpon>
+    </Compile>
     <Compile Include="icons\SampleIcon.xaml.cs">
       <DependentUpon>SampleIcon.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
     <Page Include="icons\ContainingCircle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\Error.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="icons\SampleIcon.xaml">
       <SubType>Designer</SubType>

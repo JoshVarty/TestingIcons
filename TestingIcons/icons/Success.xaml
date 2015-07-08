@@ -20,15 +20,15 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.167" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="9"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.417" Value="10"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.467" Value="10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.53" Value="9"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="rightLine">
                 <EasingDoubleKeyFrame KeyTime="0" Value="9"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.167" Value="9"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.417" Value="-1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.467" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.53" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rightLine">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
@@ -38,13 +38,13 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.167" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.417" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.467" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.53" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="leftLine">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.417" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.467" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.53" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
 
         </Storyboard>
