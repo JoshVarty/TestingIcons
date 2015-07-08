@@ -69,6 +69,9 @@
     <Compile Include="icons\Success.xaml.cs">
       <DependentUpon>Success.xaml</DependentUpon>
     </Compile>
+    <Compile Include="icons\Warning.xaml.cs">
+      <DependentUpon>Warning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XIcon.xaml.cs">
       <DependentUpon>XIcon.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
     <Page Include="icons\Success.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\Warning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
