@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <Storyboard x:Key="WarningEnter">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line">
-                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="19">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <CircleEase EasingMode="EaseInOut"/>
@@ -27,7 +27,7 @@
                         <CircleEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="23"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="22"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="21"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="ellipse">
@@ -63,8 +63,8 @@
             </Path.Data>
         </Path>
 
-        <Line x:Name="line" Stroke="Black" StrokeThickness="2" X1="15" Y1="6" X2="15" Y2="19"/>
-        <Ellipse x:Name="ellipse" Stroke="Black" Fill="Black" Width="3" Height="3" Canvas.Left="13.5" Canvas.Top="21"/>
+        <Line x:Name="line" Stroke="Black" StrokeThickness="2" X1="15" Y1="8" X2="15" Y2="18"/>
+        <Ellipse x:Name="ellipse" Stroke="Black" Fill="Black" Width="3" Height="3" Canvas.Left="13.5" Canvas.Top="20"/>
 
     </Canvas>
 </UserControl>
