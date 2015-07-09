@@ -66,6 +66,9 @@
     <Compile Include="icons\Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
+    <Compile Include="icons\Processing.xaml.cs">
+      <DependentUpon>Processing.xaml</DependentUpon>
+    </Compile>
     <Compile Include="icons\SampleIcon.xaml.cs">
       <DependentUpon>SampleIcon.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="icons\Error.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\Processing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

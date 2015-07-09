@@ -21,7 +21,9 @@
         <icon:Error Width="30" Height="30" Canvas.Left="75" Canvas.Top="440"/>
         <icon:Warning Width="30" Height="30" Canvas.Left="45" Canvas.Top="470"/>
         <icon:Warning2 Width="30" Height="30" Canvas.Left="75" Canvas.Top="470"/>
-
+        
+        <icon:Processing Width="30" Height="30" Canvas.Left="45" Canvas.Top="500"/>
+        
 
     </Canvas>
 </Window>

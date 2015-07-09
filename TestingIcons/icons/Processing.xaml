@@ -1,12 +1,13 @@
-﻿<Window x:Class="TestingIcons.ProcessingIcon"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TestingIcons"
-        mc:Ignorable="d"
-        Title="ProcessingIcon" Height="300" Width="300">
-    <Window.Resources>
+﻿<UserControl x:Class="TestingIcons.icons.Processing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestingIcons.icons"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="30" d:DesignWidth="30">
+    <UserControl.Resources>
         <Storyboard x:Key="SpinningAnimation">
 
             <!--Reset the arc to a single point-->
@@ -15,7 +16,7 @@
                 Storyboard.TargetProperty="StartPoint"
                 >
                 <!--Always grow the arc from its starting position-->
-                <DiscretePointKeyFrame KeyTime="0:0:0" Value="200 75"/>
+                <DiscretePointKeyFrame KeyTime="0:0:0" Value="15 2"/>
             </PointAnimationUsingKeyFrames>
             <!-- Grow the arc from a point -->
             <PointAnimationUsingPath
@@ -25,9 +26,9 @@
                 AccelerationRatio="0.5">
                 <PointAnimationUsingPath.PathGeometry>
                     <PathGeometry>
-                        <PathFigure StartPoint="200 75" IsClosed="False">
+                        <PathFigure StartPoint="15 2" IsClosed="False">
                             <ArcSegment
-                                Point="288.38 111.61"
+                                Point="24.192 5.808"
                                 Size="125 125" 
                                 IsLargeArc="False"
                                 SweepDirection="Clockwise" />
@@ -46,10 +47,10 @@
                 >
                 <PointAnimationUsingPath.PathGeometry>
                     <PathGeometry>
-                        <PathFigure StartPoint="200 75">
-                            <ArcSegment Size="125 125" Point="200 325"
+                        <PathFigure StartPoint="15 2">
+                            <ArcSegment Size="13 13" Point="15 28"
                                             SweepDirection="Clockwise" />
-                            <ArcSegment Size="125 125" Point="200 75"
+                            <ArcSegment Size="13 13" Point="15 2"
                                             SweepDirection="Clockwise" />
                         </PathFigure>
                     </PathGeometry>
@@ -64,10 +65,10 @@
                     >
                 <PointAnimationUsingPath.PathGeometry>
                     <PathGeometry>
-                        <PathFigure StartPoint="288.38 111.61">
-                            <ArcSegment Size="125 125" Point="111.61 288.39"
+                        <PathFigure StartPoint="24.192 5.808">
+                            <ArcSegment Size="13 13" Point="5.808 24.192"
                                                 SweepDirection="Clockwise" />
-                            <ArcSegment Size="125 125" Point="288.38 111.61"
+                            <ArcSegment Size="13 13" Point="24.192 5.808"
                                                 SweepDirection="Clockwise" />
                         </PathFigure>
                     </PathGeometry>
@@ -84,10 +85,10 @@
                 RepeatBehavior="Forever">
                 <PointAnimationUsingPath.PathGeometry>
                     <PathGeometry>
-                        <PathFigure StartPoint="200 75">
-                            <ArcSegment Size="125 125" Point="200 325"
+                        <PathFigure StartPoint="15 2">
+                            <ArcSegment Size="13 13" Point="15 28"
                                             SweepDirection="Clockwise" />
-                            <ArcSegment Size="125 125" Point="200 75"
+                            <ArcSegment Size="13 13" Point="15 2"
                                             SweepDirection="Clockwise" />
                         </PathFigure>
                     </PathGeometry>
@@ -101,10 +102,10 @@
                     RepeatBehavior="Forever">
                 <PointAnimationUsingPath.PathGeometry>
                     <PathGeometry>
-                        <PathFigure StartPoint="288.38 111.61">
-                            <ArcSegment Size="125 125" Point="111.61 288.39"
+                        <PathFigure StartPoint="24.192 5.808">
+                            <ArcSegment Size="13 13" Point="5.808 24.192"
                                                 SweepDirection="Clockwise" />
-                            <ArcSegment Size="125 125" Point="288.38 111.61"
+                            <ArcSegment Size="13 13" Point="24.192 5.808"
                                                 SweepDirection="Clockwise" />
                         </PathFigure>
                     </PathGeometry>
@@ -112,35 +113,40 @@
             </PointAnimationUsingPath>
 
         </Storyboard>
-
-
-
-        <Storyboard x:Key="test">
-
-
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
+        </UserControl.Resources>
+        <UserControl.Triggers>
         <EventTrigger RoutedEvent="Window.MouseDown">
             <BeginStoryboard Storyboard="{StaticResource SpinningAnimation}"/>
         </EventTrigger>
-    </Window.Triggers>
-
-
+    </UserControl.Triggers>
     <Canvas>
-        <Path x:Name="eighthOfCircle" Stroke="Black" StrokeThickness="5">
+
+        <!--Containing Circle-->
+        <Path Stroke="LightBlue" StrokeThickness="1">
             <Path.Data>
                 <PathGeometry>
-                    <PathFigure x:Name="startArc" StartPoint="200 75" IsClosed="False">
+                    <PathFigure StartPoint="2 15">
+                        <ArcSegment Size="1 1" Point="28 15"
+                                                    SweepDirection="Clockwise" />
+                        <ArcSegment Size="1 1" Point="2 15"
+                                                    SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Path x:Name="eighthOfCircle" Stroke="Black" StrokeThickness="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure x:Name="startArc" StartPoint="15 2" IsClosed="False">
                         <ArcSegment x:Name="endArc"
-                                    Point="200 75"
-                                    Size="125 125" 
+                                    Point="15 2"
+                                    Size="13 13" 
                                     IsLargeArc="False"
                                     SweepDirection="Clockwise" />
-
                     </PathFigure>
                 </PathGeometry>
             </Path.Data>
         </Path>
     </Canvas>
-</Window>
+</UserControl>
