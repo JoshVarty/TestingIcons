@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestingIcons
+namespace TestingIcons.icons
 {
     /// <summary>
-    /// Interaction logic for OrbitingIcons.xaml
+    /// Interaction logic for Warning2.xaml
     /// </summary>
-    public partial class OrbitingIcons : Window
+    public partial class Warning2 : UserControl
     {
-        public OrbitingIcons()
+        public Warning2()
         {
             InitializeComponent();
         }

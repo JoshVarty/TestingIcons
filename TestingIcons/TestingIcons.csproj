@@ -75,6 +75,9 @@
     <Compile Include="icons\Warning.xaml.cs">
       <DependentUpon>Warning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="icons\Warning2.xaml.cs">
+      <DependentUpon>Warning2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XIcon.xaml.cs">
       <DependentUpon>XIcon.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="icons\Warning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\Warning2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,10 +146,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OrbitingIcons.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PieIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,9 +162,6 @@
   <ItemGroup>
     <Compile Include="MappingIcon.xaml.cs">
       <DependentUpon>MappingIcon.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="OrbitingIcons.xaml.cs">
-      <DependentUpon>OrbitingIcons.xaml</DependentUpon>
     </Compile>
     <Compile Include="PieIcon.xaml.cs">
       <DependentUpon>PieIcon.xaml</DependentUpon>
