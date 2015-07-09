@@ -16,7 +16,7 @@
             <ImageBrush ImageSource="background.png" Stretch="None"/>
         </Canvas.Background>
 
-
+        <icon:ClickAnimation Width="30" Height="30" Canvas.Left="75" Canvas.Top="380"/>
         <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="410"/>
         <icon:Error Width="30" Height="30" Canvas.Left="75" Canvas.Top="440"/>
         <icon:Warning Width="30" Height="30" Canvas.Left="75" Canvas.Top="470"/>

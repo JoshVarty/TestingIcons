@@ -57,6 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="icons\ClickAnimation.xaml.cs">
+      <DependentUpon>ClickAnimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="icons\ContainingCircle.xaml.cs">
       <DependentUpon>ContainingCircle.xaml</DependentUpon>
     </Compile>
@@ -68,6 +71,9 @@
     </Compile>
     <Compile Include="icons\Success.xaml.cs">
       <DependentUpon>Success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="icons\Warning.xaml.cs">
+      <DependentUpon>Warning.xaml</DependentUpon>
     </Compile>
     <Compile Include="XIcon.xaml.cs">
       <DependentUpon>XIcon.xaml</DependentUpon>
@@ -84,6 +90,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="icons\ClickAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="icons\ContainingCircle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="icons\Success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\Warning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
