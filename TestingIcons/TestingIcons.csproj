@@ -139,10 +139,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OrbitingIcons.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PieIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,9 +155,6 @@
   <ItemGroup>
     <Compile Include="MappingIcon.xaml.cs">
       <DependentUpon>MappingIcon.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="OrbitingIcons.xaml.cs">
-      <DependentUpon>OrbitingIcons.xaml</DependentUpon>
     </Compile>
     <Compile Include="PieIcon.xaml.cs">
       <DependentUpon>PieIcon.xaml</DependentUpon>
