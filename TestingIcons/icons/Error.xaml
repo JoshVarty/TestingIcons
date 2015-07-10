@@ -13,8 +13,87 @@
         <sys:Double x:Key="Y1">7</sys:Double>
         <sys:Double x:Key="X2">10.5</sys:Double>
         <sys:Double x:Key="Y2">10.5</sys:Double>
+        <Storyboard x:Key="XEnter">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-270"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="line2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="90">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="line3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="180">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.357" Value="270">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
-  
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
+            <BeginStoryboard Storyboard="{StaticResource XEnter}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+
     <Canvas>
         <Path Stroke="Black" StrokeThickness="1">
             <Path.Data>
@@ -41,8 +120,8 @@
             </Line.RenderTransform>
         </Line>
 
-        <Line X1="{StaticResource X1}" Y1="{StaticResource Y1}" X2="{StaticResource X2}" Y2="{StaticResource Y2}"  
-            RenderTransformOrigin="1, 1" Height="{Binding Y2}" Width="{Binding X2}" x:Name="line2" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Triangle">
+        <Line X1="{StaticResource X1}" X2="{StaticResource X2}" Y2="{StaticResource Y2}"  
+            RenderTransformOrigin="1, 1" Height="{Binding Y2}" Width="{Binding X2}" x:Name="line2" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Triangle" Y1="{DynamicResource Y1}">
             <Line.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
