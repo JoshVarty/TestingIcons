@@ -23,20 +23,6 @@
         </GuideModel>
       </GuideModels>
     </ProjectItemGuide>
-    <ProjectItemGuide TargetFile="icons\Error.xaml">
-      <GuideModels>
-        <GuideModel>
-          <Guides>
-            <Guide Alignment="Left" Position="10" />
-            <Guide Alignment="Left" Position="20" />
-            <Guide Alignment="Top" Position="10" />
-            <Guide Alignment="Top" Position="20" />
-            <Guide Alignment="Top" Position="2" />
-            <Guide Alignment="Top" Position="28" />
-          </Guides>
-        </GuideModel>
-      </GuideModels>
-    </ProjectItemGuide>
     <ProjectItemGuide TargetFile="icons\Processing.xaml">
       <GuideModels>
         <GuideModel>
@@ -45,6 +31,18 @@
             <Guide Alignment="Left" Position="2" />
             <Guide Alignment="Left" Position="28" />
             <Guide Alignment="Left" Position="15" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
+    <ProjectItemGuide TargetFile="icons\Error.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Top" Position="11" />
+            <Guide Alignment="Left" Position="11" />
+            <Guide Alignment="Left" Position="0" />
+            <Guide Alignment="Left" Position="22" />
           </Guides>
         </GuideModel>
       </GuideModels>
