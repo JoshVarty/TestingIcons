@@ -13,6 +13,16 @@
         </GuideModel>
       </GuideModels>
     </ProjectItemGuide>
+    <ProjectItemGuide TargetFile="icons\Warning.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Left" Position="13" />
+            <Guide Alignment="Left" Position="17" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
     <ProjectItemGuide TargetFile="icons\Error.xaml">
       <GuideModels>
         <GuideModel>
@@ -23,16 +33,6 @@
             <Guide Alignment="Top" Position="20" />
             <Guide Alignment="Top" Position="2" />
             <Guide Alignment="Top" Position="28" />
-          </Guides>
-        </GuideModel>
-      </GuideModels>
-    </ProjectItemGuide>
-    <ProjectItemGuide TargetFile="icons\Warning.xaml">
-      <GuideModels>
-        <GuideModel>
-          <Guides>
-            <Guide Alignment="Left" Position="13" />
-            <Guide Alignment="Left" Position="17" />
           </Guides>
         </GuideModel>
       </GuideModels>

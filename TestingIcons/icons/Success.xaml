@@ -55,21 +55,19 @@
         </EventTrigger>
     </UserControl.Triggers>
 
-    <Canvas Background="White">
+    <Canvas>
         <Path Stroke="Black" StrokeThickness="1">
             <Path.Data>
                 <PathGeometry>
-                    <PathFigure StartPoint="2 15">
-                        <ArcSegment Size="1 1" Point="28 15"
-                                                    SweepDirection="Clockwise" />
-                        <ArcSegment Size="1 1" Point="2 15"
-                                                    SweepDirection="Clockwise" />
+                    <PathFigure StartPoint="1 11">
+                        <ArcSegment Size="10 10" Point="21 11" SweepDirection="Clockwise"/>
+                        <ArcSegment Size="10 10" Point="1 11" SweepDirection="Clockwise"/>
                     </PathFigure>
                 </PathGeometry>
             </Path.Data>
         </Path>
-        <Line x:Name="leftLine" X1="0" Y1="0" X2="4" Y2="4" Stroke="Black" StrokeThickness="2" StrokeStartLineCap="Round" Canvas.Top="15.79" Canvas.Left="8.986"/>
-        <Line x:Name="rightLine" X1="0" Y1="9" X2="9" Y2="0" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" Canvas.Top="10.792" Canvas.Left="11.622"/>
 
+        <Line X1="0" Y1="0" X2="4" Y2="4" Stroke="Black" Canvas.Left="6" Canvas.Top="12" StrokeStartLineCap="Round" />
+        <Line X1="0" Y1="8" X2="8" Y2="0" Stroke="Black" Canvas.Left="9" Canvas.Top="8"  StrokeEndLineCap="Round"/>
     </Canvas>
 </UserControl>

@@ -79,10 +79,63 @@
             </DoubleAnimationUsingKeyFrames>
 
         </Storyboard>
+        <Storyboard x:Key="HoverStop">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.06" Value="8.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.06" Value="8.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.06" Value="8.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.06" Value="8.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.12" Value="9.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
             <BeginStoryboard Storyboard="{StaticResource XEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource HoverStop}"/>
         </EventTrigger>
     </UserControl.Triggers>
     <Canvas>

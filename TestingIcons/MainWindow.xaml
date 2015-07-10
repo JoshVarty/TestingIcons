@@ -16,13 +16,14 @@
             <ImageBrush ImageSource="background.png" Stretch="None"/>
         </Canvas.Background>
 
-        <icon:ClickAnimation Width="30" Height="30" Canvas.Left="75" Canvas.Top="380"/>
-        <icon:Success Width="30" Height="30" Canvas.Left="75" Canvas.Top="410"/>
-        <icon:Error Width="30" Height="30" Canvas.Left="75" Canvas.Top="440"/>
-        <icon:Warning Width="30" Height="30" Canvas.Left="45" Canvas.Top="470"/>
-        <icon:Warning2 Width="30" Height="30" Canvas.Left="75" Canvas.Top="470"/>
+        <icon:ClickAnimation Width="30" Height="30" Canvas.Left="75" Canvas.Top="350"/>
+        <icon:IdleIcon Width="22" Height="22" Canvas.Left="75" Canvas.Top="380"/>
+        <icon:Success Width="22" Height="22" Canvas.Left="75" Canvas.Top="410"/>
+        <icon:Error Width="22" Height="22" Canvas.Left="75" Canvas.Top="440"/>
+        <icon:Warning Width="22" Height="22" Canvas.Left="45" Canvas.Top="470"/>
+        <icon:Warning2 Width="22" Height="22" Canvas.Left="75" Canvas.Top="470"/>
         
-        <icon:Processing Width="30" Height="30" Canvas.Left="45" Canvas.Top="500"/>
+        <icon:Processing Width="22" Height="22" Canvas.Left="45" Canvas.Top="500"/>
         
 
     </Canvas>
