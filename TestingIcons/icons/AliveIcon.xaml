@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="TestingIcons.icons.AliveIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestingIcons.icons"
+             xmlns:sysWin="clr-namespace:System.Windows;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             Background="White"
+             Height="22"
+             Width="300">
+    <UserControl.Resources>
+        <sysWin:Point x:Key="topCenterPoint">11 1</sysWin:Point>
+        <sysWin:Point x:Key="topRightPoint">18.07 3.929</sysWin:Point>
+        <sysWin:Point x:Key="bottomCenterPoint">11 21</sysWin:Point>
+        <sysWin:Point x:Key="bottomLeftPoint">3.929 18.07</sysWin:Point>
+        <sysWin:Size x:Key="circleSize">10 10</sysWin:Size>
+    </UserControl.Resources>
+    <Canvas>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="iconStates">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition To="Idle">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="line1">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="line2">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line2">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line2">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="line3">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line3">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line3">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+                    
+                    <VisualTransition From="Idle" To="Processing">
+                        <Storyboard>
+                            <!-- Fade the outer ring out -->
+                            <DoubleAnimation 
+                                Storyboard.TargetName="outerPath"
+                                Storyboard.TargetProperty="Opacity"
+                                From="1" To="0" Duration="0:0:0.5"/>
+                            <!--Reset the arc to a single point-->
+                            <PointAnimationUsingKeyFrames
+                                Storyboard.TargetName="startArc"
+                                Storyboard.TargetProperty="StartPoint">
+                                <!--Always grow the arc from its starting position-->
+                                <DiscretePointKeyFrame KeyTime="0:0:0" Value="{StaticResource topCenterPoint}"/>
+                            </PointAnimationUsingKeyFrames>
+                            <!-- Grow the arc from a point -->
+                            <PointAnimationUsingPath
+                                Storyboard.TargetName="endArc"
+                                Storyboard.TargetProperty="Point"
+                                Duration="0:0:0.2"
+                                AccelerationRatio="0.5">
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="{StaticResource topCenterPoint}" IsClosed="False">
+                                            <ArcSegment
+                                                Point="{StaticResource topRightPoint}"
+                                                Size="{StaticResource circleSize}" 
+                                                IsLargeArc="False"
+                                                SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+
+                            <!--Spin the arc in a circle-->
+                            <PointAnimationUsingPath 
+                                Storyboard.TargetName="startArc"
+                                Storyboard.TargetProperty="StartPoint"
+                                Duration="0:0:0.8"
+                                BeginTime="0:0:0.2"
+                                AccelerationRatio="0.4"
+                                >
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="{StaticResource topCenterPoint}">
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource bottomCenterPoint}"
+                                                            SweepDirection="Clockwise" />
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource topCenterPoint}"
+                                                            SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+    
+                            <PointAnimationUsingPath 
+                                    Storyboard.TargetName="endArc"
+                                    Storyboard.TargetProperty="Point"
+                                    Duration="0:0:0.8"
+                                    BeginTime="0:0:0.2"
+                                    AccelerationRatio="0.4"
+                                    >
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="{StaticResource topRightPoint}">
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource bottomLeftPoint}"
+                                                                SweepDirection="Clockwise" />
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource topRightPoint}"
+                                                                SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+
+                            <!-- Spin the arc faster after a single rotation-->
+                            <PointAnimationUsingPath 
+                                Storyboard.TargetName="startArc"
+                                Storyboard.TargetProperty="StartPoint"
+                                Duration="0:0:0.4"
+                                BeginTime="0:0:1.05"
+                                RepeatBehavior="Forever">
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="{StaticResource topCenterPoint}">
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource bottomCenterPoint}"
+                                                            SweepDirection="Clockwise" />
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource topCenterPoint}"
+                                                            SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+                            <PointAnimationUsingPath 
+                                    Storyboard.TargetName="endArc"
+                                    Storyboard.TargetProperty="Point"
+                                    Duration="0:0:0.4"
+                                    BeginTime="0:0:1"
+                                    RepeatBehavior="Forever">
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="{StaticResource topRightPoint}">
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource bottomLeftPoint}"
+                                                                SweepDirection="Clockwise" />
+                                            <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource topRightPoint}"
+                                                                SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+                        </Storyboard>                        
+                        
+                    </VisualTransition>
+                    
+                    <VisualTransition From="Processing" To="Success">
+                        
+                    </VisualTransition>
+                    <VisualTransition From="Processing" To="Error">
+                        
+                    </VisualTransition>
+                    <VisualTransition From="Processing" To="Warning">
+                        
+                    </VisualTransition>
+                    
+                    
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="Idle">
+                    
+                </VisualState>
+                <VisualState x:Name="Processing"></VisualState>
+                <VisualState x:Name="Success"></VisualState>
+                <VisualState x:Name="Warning"></VisualState>
+                <VisualState x:Name="Error"></VisualState>
+                <VisualState x:Name="Stop"></VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Path x:Name="outerPath" Stroke="Black" StrokeThickness="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="{StaticResource topCenterPoint}">
+                        <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource bottomCenterPoint}" SweepDirection="Clockwise"/>
+                        <ArcSegment Size="{StaticResource circleSize}" Point="{StaticResource topCenterPoint}" SweepDirection="Clockwise"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Path x:Name="eighthOfCircle" Stroke="Black" StrokeThickness="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure x:Name="startArc" StartPoint="{StaticResource topCenterPoint}" IsClosed="False">
+                        <ArcSegment x:Name="endArc"
+                                    Point="{StaticResource topRightPoint}"
+                                    Size="{StaticResource circleSize}" 
+                                    IsLargeArc="False"
+                                    SweepDirection="Clockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+
+        <Line x:Name="line1" StrokeThickness="1" Stroke="Black" X1="0" Y1="0" X2="0" Y2="0"/>
+        <Line x:Name="line2" StrokeThickness="1" Stroke="Black" X1="0" Y1="0" X2="0" Y2="0"/>
+        <Line x:Name="line3" StrokeThickness="1" Stroke="Black" X1="0" Y1="0" X2="0" Y2="0"/>
+        <Line x:Name="line4" StrokeThickness="1" Stroke="Black" X1="0" Y1="0" X2="0" Y2="0"/>
+
+        <Button Content="Idle" Height="15" FontSize="10" Canvas.Top="4" Canvas.Left="25" Click="IdleButton_Click"/>
+        <Button Content="Processing" Height="15" FontSize="10" Canvas.Top="4" Canvas.Left="50" Click="ProcessingButton_Click"/>
+        <Button Content="Success" Height="15" FontSize="10" Canvas.Top="4" Canvas.Left="105" Click="SuccessButton_Click"/>
+        <Button Content="Error" Height="15" FontSize="10" Canvas.Top="4" Canvas.Left="145" Click="ErrorButton_Click"/>
+        <Button Content="Warning" Height="15" FontSize="10" Canvas.Top="4" Canvas.Left="175" Click="WarningButton_Click"/>
+    </Canvas>
+</UserControl>
