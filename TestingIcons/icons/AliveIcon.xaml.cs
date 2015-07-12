@@ -20,29 +20,40 @@ namespace TestingIcons.icons
     /// </summary>
     public partial class AliveIcon : UserControl
     {
+        public enum IconStates
+        {
+            Idle,
+            Processing,
+            Success,
+            Error,
+            Warning,
+        }
+
         public AliveIcon()
         {
             InitializeComponent();
+            //Our default state
+            VisualStateManager.GoToState(this, nameof(IconStates.Idle), true);
         }
 
         private void IdleButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Idle", true);
+            VisualStateManager.GoToState(this, nameof(IconStates.Idle), true);
         }
 
         private void ProcessingButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Processing", true);
+            VisualStateManager.GoToState(this, nameof(IconStates.Processing), true);
         }
 
         private void SuccessButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Success", true);
+            VisualStateManager.GoToState(this, nameof(IconStates.Success), true);
         }
 
         private void ErrorButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Error", true);
+            VisualStateManager.GoToState(this, nameof(IconStates.Error), true);
         }
 
         private void WarningButton_Click(object sender, RoutedEventArgs e)

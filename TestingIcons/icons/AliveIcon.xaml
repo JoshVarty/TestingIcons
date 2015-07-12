@@ -182,15 +182,37 @@
                     </VisualTransition>
                     
                     <VisualTransition From="Processing" To="Success">
-                        
+                         <Storyboard>
+                            <DoubleAnimation 
+                                Storyboard.TargetName="outerPath"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0" To="1" Duration="0:0:0.3"/>
+                             
+                            <!--Reset start arc to starting position-->
+                            <PointAnimationUsingKeyFrames
+                                Storyboard.TargetName="startArc"
+                                Storyboard.TargetProperty="StartPoint"
+                                BeginTime="0:0:1.3">
+                                <DiscretePointKeyFrame KeyTime="0:0:1.3" Value="{StaticResource topCenterPoint}"/>
+                            </PointAnimationUsingKeyFrames>
+            
+                            <!--Reset end arc to starting position-->
+                            <PointAnimationUsingKeyFrames
+                                Storyboard.TargetName="endArc" 
+                                Storyboard.TargetProperty="Point"
+                                BeginTime="0:0:1.3">    
+                                <DiscretePointKeyFrame KeyTime="0:0:1.3" Value="{StaticResource topCenterPoint}"/>
+                            </PointAnimationUsingKeyFrames>
+                        </Storyboard>
                     </VisualTransition>
+                    
                     <VisualTransition From="Processing" To="Error">
                         
                     </VisualTransition>
+                    
                     <VisualTransition From="Processing" To="Warning">
                         
                     </VisualTransition>
-                    
                     
                 </VisualStateGroup.Transitions>
                 <VisualState x:Name="Idle">
