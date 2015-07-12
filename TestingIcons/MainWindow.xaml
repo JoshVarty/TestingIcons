@@ -25,7 +25,9 @@
         <icon:Warning Width="22" Height="22" Canvas.Left="45" Canvas.Top="470"/>
         <icon:Warning2 Width="22" Height="22" Canvas.Left="75" Canvas.Top="470"/>
         
-        <icon:Processing Width="100" Height="22" Canvas.Left="75" Canvas.Top="505"/>
+        <icon:StopIcon Width="22" Height="22" Canvas.Left="75" Canvas.Top="500"/>
+        
+        <icon:Processing Width="100" Height="22" Canvas.Left="75" Canvas.Top="535"/>
         
 
     </Canvas>

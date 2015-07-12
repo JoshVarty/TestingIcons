@@ -572,6 +572,16 @@
                         </Storyboard>
                     </VisualTransition>
                     
+                    <VisualTransition From="Success" To="Stop">
+                        
+                    </VisualTransition>
+                    <VisualTransition From="Error" To="Stop">
+
+                    </VisualTransition>
+                    <VisualTransition From="Warning" To="Stop">
+
+                    </VisualTransition>
+
                 </VisualStateGroup.Transitions>
                 <VisualState x:Name="Idle">
                     
