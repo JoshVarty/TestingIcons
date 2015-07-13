@@ -553,19 +553,17 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.333" Value="{x:Static PenLineCap.Flat}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
             </ObjectAnimationUsingKeyFrames>
-
-
         </Storyboard>
 
     </UserControl.Resources>
     <UserControl.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
+        <!--<EventTrigger RoutedEvent="FrameworkElement.MouseDown">
             <BeginStoryboard Storyboard="{StaticResource CheckmarkEnter}"/>
-        </EventTrigger>
+        </EventTrigger>-->
         <EventTrigger RoutedEvent="FrameworkElement.MouseEnter">
             <BeginStoryboard Storyboard="{StaticResource SuccessToStop}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="FrameworkElement.MouseLeave">
+        <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
             <BeginStoryboard x:Name="StopToSuccess_BeginStoryboard" Storyboard="{StaticResource StopToSuccess}"/>
         </EventTrigger>
     </UserControl.Triggers>

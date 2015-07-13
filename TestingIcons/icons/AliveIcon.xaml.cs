@@ -27,6 +27,7 @@ namespace TestingIcons.icons
             Success,
             Error,
             Warning,
+            Stop,
         }
 
         public AliveIcon()
@@ -58,7 +59,12 @@ namespace TestingIcons.icons
 
         private void WarningButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Warning", true);
+            VisualStateManager.GoToState(this, nameof(IconStates.Warning), true);
+        }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            VisualStateManager.GoToState(this, nameof(IconStates.Stop), true);
         }
     }
 }
