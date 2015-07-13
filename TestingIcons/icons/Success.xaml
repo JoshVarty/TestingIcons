@@ -372,6 +372,191 @@
 
 
         </Storyboard>
+        <Storyboard x:Key="StopToSuccess">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="4.802"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="3.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="-0.768"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="3.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="6.198"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="6.198"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="11.768"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="11.768"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="8.822"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="8.822"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="8.252"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="8.252"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="2.748"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1.25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line1">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1.25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Round}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.333" Value="{x:Static PenLineCap.Round}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Round}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="2.178"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.333" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line3">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line4">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line3">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line4">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line3">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line4">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeDashCap)" Storyboard.TargetName="line1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeDashCap)" Storyboard.TargetName="line2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeDashCap)" Storyboard.TargetName="line3">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeDashCap)" Storyboard.TargetName="line4">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.333" Value="{x:Static PenLineCap.Flat}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static PenLineCap.Flat}"/>
+            </ObjectAnimationUsingKeyFrames>
+
+
+        </Storyboard>
+
     </UserControl.Resources>
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
@@ -379,6 +564,9 @@
         </EventTrigger>
         <EventTrigger RoutedEvent="FrameworkElement.MouseEnter">
             <BeginStoryboard Storyboard="{StaticResource SuccessToStop}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="FrameworkElement.MouseLeave">
+            <BeginStoryboard x:Name="StopToSuccess_BeginStoryboard" Storyboard="{StaticResource StopToSuccess}"/>
         </EventTrigger>
     </UserControl.Triggers>
     <Canvas>
