@@ -563,8 +563,8 @@
         <EventTrigger RoutedEvent="FrameworkElement.MouseEnter">
             <BeginStoryboard Storyboard="{StaticResource SuccessToStop}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="FrameworkElement.MouseDown">
-            <BeginStoryboard x:Name="StopToSuccess_BeginStoryboard" Storyboard="{StaticResource StopToSuccess}"/>
+        <EventTrigger RoutedEvent="FrameworkElement.MouseLeave">
+            <BeginStoryboard Storyboard="{StaticResource StopToSuccess}"/>
         </EventTrigger>
     </UserControl.Triggers>
     <Canvas>
