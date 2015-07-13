@@ -377,7 +377,7 @@
 
 
         </Storyboard>
-        <Storyboard x:Key="StopToEnter">
+        <Storyboard x:Key="StopToError">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line1">
                 <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:0.15" Value="11"/>
@@ -796,7 +796,7 @@
             <BeginStoryboard Storyboard="{StaticResource ErrorToStop}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="FrameworkElement.MouseLeave">
-            <BeginStoryboard Storyboard="{StaticResource StopToEnter}"/>
+            <BeginStoryboard Storyboard="{StaticResource StopToError}"/>
         </EventTrigger>
     </UserControl.Triggers>
 
