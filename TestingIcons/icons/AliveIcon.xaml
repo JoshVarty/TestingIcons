@@ -180,6 +180,193 @@
                         </Storyboard>                        
                         
                     </VisualTransition>
+                    <VisualTransition From="Stop" To="Idle">
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="8">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line1">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="8">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line1">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="16">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="8">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line2">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="16">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line2">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="11">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="8">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="16">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line3">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="16">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line3">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="11">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line4">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line4">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line4">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="7"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line4">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="15"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="11"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line1">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line2">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line3">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeStartLineCap)" Storyboard.TargetName="line4">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line1">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line2">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line3">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Round}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line4">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Round}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static PenLineCap.Flat}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line1">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line2">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line3">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BackEase EasingMode="EaseOut" Amplitude="0.7"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line4">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1.25"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
                     
                     <VisualTransition From="Processing" To="Success">
                         <Storyboard>
