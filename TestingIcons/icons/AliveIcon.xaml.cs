@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,51 +21,180 @@ namespace TestingIcons.icons
     /// </summary>
     public partial class AliveIcon : UserControl
     {
-        public enum IconStates
+        private enum AliveState
         {
             Idle,
             Processing,
             Success,
             Error,
             Warning,
-            Stop,
+            Stop
         }
 
+        /// <summary>
+        /// The current logical state represents the underlying state of the icon.
+        /// Typically, this is one-to-one with the visual state of the icon. However,
+        /// the icon may also enter a Stop state when the user hovers over the icon.
+        /// </summary>
+        private AliveState _currentLogicalState;
+        private AliveState CurrentLogicalState
+        {
+            get
+            {
+                return _currentLogicalState;
+            }
+            set
+            {
+                _currentLogicalState = value;
+                VisualStateManager.GoToState(this, value.ToString(), true);
+            }
+        }
+
+        private Timer aTimer;
         public AliveIcon()
         {
             InitializeComponent();
-            //Our default state
-            VisualStateManager.GoToState(this, nameof(IconStates.Idle), true);
+            CurrentLogicalState = AliveState.Idle;
+            aTimer = new Timer(3000);
+            aTimer.Elapsed += timerElapsed;
+            aTimer.Enabled = true;
+
+
         }
 
-        private void IdleButton_Click(object sender, RoutedEventArgs e)
+        private void timerElapsed(object sender, ElapsedEventArgs e)
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Idle), true);
+            var currentVisualState = iconStateGroup.CurrentState.Name;
+            System.Diagnostics.Debug.WriteLine(currentVisualState);
         }
 
-        private void ProcessingButton_Click(object sender, RoutedEventArgs e)
+        public void GoToIdle()
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Processing), true);
+            CurrentLogicalState = AliveState.Idle;
         }
 
-        private void SuccessButton_Click(object sender, RoutedEventArgs e)
+        public void GoToProcessing()
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Success), true);
+            CurrentLogicalState = AliveState.Processing;
         }
 
-        private void ErrorButton_Click(object sender, RoutedEventArgs e)
+        public void GoToSuccess()
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Error), true);
+            CurrentLogicalState = AliveState.Success;
         }
 
-        private void WarningButton_Click(object sender, RoutedEventArgs e)
+        public void GoToWarning()
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Warning), true);
+            CurrentLogicalState = AliveState.Warning;
         }
 
-        private void StopButton_Click(object sender, RoutedEventArgs e)
+        public void GoToError()
         {
-            VisualStateManager.GoToState(this, nameof(IconStates.Stop), true);
+            CurrentLogicalState = AliveState.Error;
+        }
+
+        private void aliveIcon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var currentVisualState = iconStateGroup.CurrentState.Name;
+            switch (currentVisualState)
+            {
+                case nameof(AliveState.Success):
+                case nameof(AliveState.Error):
+                case nameof(AliveState.Warning):
+                    VisualStateManager.GoToState(this, nameof(AliveState.Stop), true);
+                    break;
+                case nameof(AliveState.Processing):
+                case nameof(AliveState.Idle):
+                case nameof(AliveState.Stop):
+                default:
+                    break;
+            }
+        }
+
+        private void aliveIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var currentVisualState = iconStateGroup.CurrentState.Name;
+            switch (currentVisualState)
+            {
+                //Return to current logical state 
+                case nameof(AliveState.Stop):
+                    VisualStateManager.GoToState(this, CurrentLogicalState.ToString(), true);
+                    break;
+                case nameof(AliveState.Processing):
+                case nameof(AliveState.Success):
+                case nameof(AliveState.Error):
+                case nameof(AliveState.Warning):
+                case nameof(AliveState.Idle):
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void aliveIcon_Clicked(object sender, MouseButtonEventArgs e)
+        {
+            cycleStates();
+
+            return;
+            var currentVisualState = iconStateGroup.CurrentState.Name;
+            switch (currentVisualState)
+            {
+                case nameof(AliveState.Idle):
+                    launchAliveWindow();
+                    break;
+                case nameof(AliveState.Stop):
+                    stopAlive();
+                    break;
+                case nameof(AliveState.Warning):
+                case nameof(AliveState.Processing):
+                case nameof(AliveState.Success):
+                case nameof(AliveState.Error):
+                default:
+                    break;
+            }
+        }
+
+        int index = 0;
+        private void cycleStates()
+        {
+            if (index == 0)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Processing), true);
+            }
+            else if (index == 1)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Success), true);
+            }
+            else if (index == 2)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Processing), true);
+            }
+            else if (index == 3)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Error), true);
+            }
+            else if (index == 4)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Processing), true);
+            }
+            else if (index == 5)
+            {
+                VisualStateManager.GoToState(this, nameof(AliveState.Warning), true);
+            }
+
+
+            index++;
+
+        }
+
+        private void launchAliveWindow()
+        {
+            //TODO: @AmadeusW please insert any code here to launch the window.
+        }
+
+        private void stopAlive()
+        {
+  
         }
     }
 }
