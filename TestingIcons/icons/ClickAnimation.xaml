@@ -9,23 +9,23 @@
              d:DesignHeight="30" d:DesignWidth="30">
     <UserControl.Resources>
         <Storyboard x:Key="Grow">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="ellipse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="clickEllipse">
                 <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="ellipse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="clickEllipse">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="20"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="ellipse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="clickEllipse">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="20"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="ellipse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="clickEllipse">
                 <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="ellipse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="clickEllipse">
                 <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
@@ -49,7 +49,7 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-        <Ellipse x:Name="ellipse" Height="0" Stroke="Black" StrokeThickness="5" Width="0" Canvas.Left="15" Canvas.Top="15"/>
+        <Ellipse x:Name="clickEllipse" Height="0" Stroke="Black" StrokeThickness="5" Width="0" Canvas.Left="15" Canvas.Top="15"/>
 
     </Canvas>
 </UserControl>
