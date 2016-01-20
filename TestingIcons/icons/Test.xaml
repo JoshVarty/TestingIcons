@@ -17,88 +17,88 @@
         <sysWin:Size x:Key="circleSize">10 10</sysWin:Size>
         <Storyboard x:Key="HoldTest">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="11"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="11"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="8"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1.5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="1.5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="3"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="-5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X2)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="8"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y2)" Storyboard.TargetName="line1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="8"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.Y1)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Line.X1)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1.5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="1.5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1.5"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="1.5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="7"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="11"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="11"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="12"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="12"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="6"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="line3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                <DiscreteDoubleKeyFrame KeyTime="0" Value="8"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeEndLineCap)" Storyboard.TargetName="line3">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static PenLineCap.Flat}"/>
